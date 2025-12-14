@@ -8,3 +8,8 @@ spring:
       password: N0WQHGUnFfSZuBnt
     jpa:
       database-platform: org.hibernate.dialect.PostgreSQLDialect
+
+api:
+    apininjas:
+      url: https://api.api-ninjas.com
+      token: Kgs0HpLmyTgW1M9QAlV1tA==L6ffKGPJFpx2o2fG
