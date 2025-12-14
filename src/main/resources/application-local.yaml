@@ -1,0 +1,10 @@
+spring:
+    application:
+      name: sm
+    datasource:
+      url: jdbc:postgresql://localhost:5432/dvdrental
+      driverClassName: org.postgresql.Driver
+      username: workshop
+      password: N0WQHGUnFfSZuBnt
+    jpa:
+      database-platform: org.hibernate.dialect.PostgreSQLDialect
