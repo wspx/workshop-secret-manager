@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  workshop-database:
+    image: bradymholt/postgres-northwind:latest
+    container_name:  workshop-database
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_DB: northwind
+      POSTGRES_USER: workshop
+      POSTGRES_PASSWORD: N0WQHGUnFfSZuBnt
+    restart: unless-stopped
+    networks:
+      - workshop-network
+
+  workshop-backend-app:
+    image: workshop-backend-app:latest
+    container_name: workshop-backend-app
+    ports:
+      - "8090:8080"
+    networks:
+      - workshop-network
+    depends_on:
+      - workshop-database
+
+networks:
+  workshop-network:
+    driver: bridge
